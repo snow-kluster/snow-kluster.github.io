@@ -40,10 +40,27 @@ if we go back a directory, we find our self at an index of all the files used in
 ![](/Blog2/natas2-index.png) 
 we can see a file called users.txt that has the contents:
 ``# username:password``
+
 ``alice:BYNdCesZqW``
+
 ``bob:jw2ueICLvT``
+
 ``charlie:G5vCxkVV3m``
+
 ``natas3:G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q``
+
 ``eve:zo4mJWyNj2``
+
 ``mallory:9urtcpzBmH``
+
 and we find our next password.
+
+## LEVEL 03
+If we view the page source, we can see that it says 
+``<!-- No more information leaks!! Not even Google will find it this time... -->``
+
+that means we google's crawlers are not able to find it.
+We can look over at robots.txt file to find **/s3cr3t/** that all crawlers are told to ignore 
+going to **/s3cr3t/** show another index of page with a users.txt file and hence giving us our password.
+
+**_natas4:tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm_**
