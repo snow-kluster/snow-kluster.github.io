@@ -6,4 +6,4 @@ tags: ['update']
 
 # Fresh Start
 
-I will be writting my Blogs and **CTF** Writeups here. Since this is essentially Markdown it will be alot easier to maintain and update.
+I will be writing my Blogs and **CTF** Write ups here. Since this is essentially Markdown, it will be a lot easier to maintain and update. 
