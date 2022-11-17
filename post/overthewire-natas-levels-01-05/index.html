@@ -55,11 +55,7 @@ If we visit this image, we can see a blank page, but the interesting thing is th
 if we go back a directory, we find our self at an index of all the files used in the page and with it a <strong>Directory listing vulnerability</strong>
 <img src=../../Blog2/natas2-index.png alt>
 we can see a file called users.txt that has the contents:
-<code># username:password</code>
-<code>alice:BYNdCesZqW</code>
-<code>bob:jw2ueICLvT</code>
-<code>charlie:G5vCxkVV3m</code>
-<code>natas3:G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q</code>
-<code>eve:zo4mJWyNj2</code>
-<code>mallory:9urtcpzBmH</code>
-and we find our next password.</p></div></article><footer class=py:24><div class="f:fade-30 f:14 mb:8">© Snow-Kluster</div><div class="f:fade-60 f:12">Theme <a class=f:bold href=https://github.com/serkodev/holy _target=_blank>Holy</a></div></footer></div></div></body></html>
+<code># username:password</code></p><p><code>alice:BYNdCesZqW</code></p><p><code>bob:jw2ueICLvT</code></p><p><code>charlie:G5vCxkVV3m</code></p><p><code>natas3:G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q</code></p><p><code>eve:zo4mJWyNj2</code></p><p><code>mallory:9urtcpzBmH</code></p><p>and we find our next password.</p><h2 id=level-03>LEVEL 03</h2><p>If we view the page source, we can see that it says
+<code>&lt;!-- No more information leaks!! Not even Google will find it this time... --></code></p><p>that means we google&rsquo;s crawlers are not able to find it.
+We can look over at robots.txt file to find <strong>/s3cr3t/</strong> that all crawlers are told to ignore
+going to <strong>/s3cr3t/</strong> show another index of page with a users.txt file and hence giving us our password.</p><p><strong><em>natas4:tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm</em></strong></p></div></article><footer class=py:24><div class="f:fade-30 f:14 mb:8">© Snow-Kluster</div><div class="f:fade-60 f:12">Theme <a class=f:bold href=https://github.com/serkodev/holy _target=_blank>Holy</a></div></footer></div></div></body></html>
