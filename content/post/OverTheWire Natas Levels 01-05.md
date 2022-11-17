@@ -30,6 +30,20 @@ and trying to right-click lead to JavaScript alert telling us
 
 As the page still seem mostly empty, let's try looking at the source by pressing <kbd>Ctrl</kbd>  + <kbd>u</kbd>. This show us the password for the next room.
 
-![](static/Blog2/natas1-password.png)
+![](/Blog2/natas1-password.png)
 
 ## LEVEL 02
+We know the routine now and immediately start looking at the page source. We can see amongst the ``HTML``  an ``img``  tag which is referencing an image named "_pixel.png_".
+![](/blog2/natas2-img-html.png) 
+If we visit this image, we can see a blank page, but the interesting thing is that we are now in a subdirectory called ``http://natas2.natas.labs.overthewire.org/files/pixel.png``
+if we go back a directory, we find our self at an index of all the files used in the page and with it a **Directory listing vulnerability**
+![](/Blog2/natas2-index.png) 
+we can see a file called users.txt that has the contents:
+``# username:password``
+``alice:BYNdCesZqW``
+``bob:jw2ueICLvT``
+``charlie:G5vCxkVV3m``
+``natas3:G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q``
+``eve:zo4mJWyNj2``
+``mallory:9urtcpzBmH``
+and we find our next password.
