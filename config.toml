@@ -1,0 +1,23 @@
+baseURL = 'snow-kluster.github.io'
+languageCode = 'en-us'
+title = "Snow Kluster's Blog"
+enableInlineShortcodes = true
+theme = 'holy'
+
+[menu]
+
+
+[params]
+  copyright = "© Snow-Kluster"
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
