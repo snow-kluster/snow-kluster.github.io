@@ -17,7 +17,7 @@ We are given the [URL](http://natas0.natas.labs.overthewire.org/) and the login 
 
 ![](/Blog2/Natas0-home-info.png)
 
-We can see there is nothing else present on the page, so let's view the page source instead, and there amongst the HTML we can the password for the next
+We can see there is nothing else present on the page, so let's view the page source instead, and there amongst the ``HTML`` we can the password for the next
 
 ![](/Blog2/Natas0-password.png)
 
@@ -72,3 +72,25 @@ We can look over at robots.txt file to find **/s3cr3t/** that all crawlers are t
 going to **/s3cr3t/** show another index page with a users.txt file and hence giving us our password.
 
 **_natas4:tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm_**
+
+## LEVEL 04
+The landing page tells us that we are visiting from ``'' ''``  and only users coming from **"http://natas5.natas.labs.overthewire.org/"** are authorized, and we don't have access to **natas5**. If we refresh the page, it now tells use that we are coming from ``http://natas4.natas.labs.overthewire.org/``. 
+If we intercept the page request using burp suite and send it to the repeater, we can see the ``referer`` header says that we are coming from the **natas4** website. As we have intercepted the request using burp suite, we can now change the ``referer`` header to **"http://natas5.natas.labs.overthewire.org/"** 
+
+![](/Blog2/natas4-referer.png)
+
+the response gives us the password
+
+![](/Blog2/natas4-ans.png)
+
+## LEVEL 05
+The landing page tells us that ``Access disallowed. You are not logged in`` and viewing the page source also doesn't reveal anything. If we view the request in ``Burp`` we can see that the there is a cookie in play called ``Cookie: loggedin=0`` that has its value set to 0 (or ``FALSE``). If we change the value of this cookie to 1 (or ``TRUE``)
+
+(doing a ``Cookie Based Authentication Vulnerabilities``)
+we can see in the response tab the password for the next room.
+
+**``fOIvE0MDtPTgRhqmmvvAOt2EfXR6uQgR``**
+
+### More to come
+
+I will be posting the solutions to natas6 through natas12, hopefully by next week, gives me a good reason to visit these war games again
