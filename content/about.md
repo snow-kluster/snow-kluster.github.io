@@ -7,5 +7,5 @@ author = "Snow Kluster"
 +++
 
 # Hi 
-I'm __Rohan Kaushik__ or as i go by my online alias **Snow-Kluster**
+I'm __Rohan Kaushik__ or as I go by my online alias **Snow-Kluster**.
 You can find me on [Github](https://github.com/snow-kluster)  
