@@ -1,0 +1,52 @@
+<!doctype html><html><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>OverTheWire Natas Levels 06-12 - Snow Kluster's Blog</title><meta name=description content="More To Learn Moving on to the next batch of war rooms, the challenges get a bit more technical and a bit more fun. So let&rsquo;s continue, shall we…
+LEVEL 06 Natas6 start us off by asking for a secret password and if we enter the wrong password it gives us an error message.
+if we view the source we can see the verification function that is used here, and we can see that it in the PHP code it includes a file called /includes/secret."><meta name=author content><link href=https://unpkg.com/@master/normal.css rel=stylesheet><script src=https://unpkg.com/@master/style@1.5.0></script>
+<script src=https://unpkg.com/@master/styles@1.13.0></script>
+<script src=https://unpkg.com/master-styles-group></script>
+<script src=https://unpkg.com/themes.js></script>
+<script>window.themes=window.themes||new window.Themes</script></head><body class="bg:fade-84@dark font:fade-16@dark"><nav class="w:full h:90 fixed bg:fade-84/.95@dark bg:white z:1000"><div class="h:full
+w:full
+max-w:1200
+mx:auto
+px:32
+d:flex
+align-items:center"><div><a href=../../ class="mr-3 font:extralight">Snow Kluster's Blog</a></div><div class=ml:auto><a class="font:semibold
+font:fade
+font:fade-10:hover
+font:fade-30.active
+px:8
+transition:150ms;ease-in" href=../../about/ title>About</a></div></div></nav><div class="d:flex flex:column@<=sm pt:90 px:24 jc:center gap:44 word-break:break-word"><div class="max-w:700 w:full box:content-box"><article class="box:border-box pt:32"><header class=mb:32><div class="font:40 font:extrabold">OverTheWire Natas Levels 06-12</div><div class="mt:16 f:fade-60"><time>Nov 20, 2022</time></div></header><div class="_:where(a):hover{text-decoration-color:fade}
+_:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
+_:where(blockquote){bl:5;solid;fade-76/.1;_bl:5;solid;fade-34/.1@dark}
+_:where(code){font:90%;_v:middle}
+_:where(code:not(.highlight_*,pre_*)){p:2;6;_r:4}
+_:where(del){text-decoration:1;line-through;fade-68;_text-decoration-color:red-64@dark}
+_:where(figcaption){text:14;_p:10;20;0;_width:fit;_mx:auto;_font:fade-56;_font:fade-57@dark}
+_:where(h1){font:40;_font:extrabold}
+_:where(h1,h2,h3)+:where(h1,h2,h3){mt:.5em}
+_:where(h1,h2,h3,h4,h5,h6){mt:2em}
+_:where(h2){mb:1em;_font:32}
+_:where(h3){font:24}
+_:where(h4){font:20}
+_:where(h5){font:16}
+_:where(h6){font:14}
+_:where(li)::marker{font:fade-44;_font:fade-68@dark}
+_:where(li){pl:.375em}
+_:where(mark){text-decoration:1;underline;#fce016;_bg:transparent;_text-decoration-color:rgb(252;224;22/.5)@dark}
+_:where(p,li){font:fade-76;_font:16;_line-height:1.65;_font:fade-34@dark}
+_:where(p,pre,blockquote,figure,ul,ol,table){my:1.125em}
+>:first-child{mt:0!}
+_:where(pre){p:20;_r:8;_overflow:auto}
+_:where(pre,code:not(.highlight_*)){bg:fade-2;_bg:fade-92!@dark}
+_:where(strong,b,a,code:not(.highlight_*),mark,del){font:fade-92;_font:fade-12@dark}
+_:where(table){width:full;_border-spacing:0}
+_:where(td){v:baseline}
+_:where(td,th):first-child{pl:0}
+_:where(td,th):last-child{pr:0}
+_:where(td,th){bb:1;solid;fade-92/.06;_p:6;_b:fade-4/.04@dark}
+_:where(th){font:fade-78;_font:14;_text:left;_font:fade-12@dark}
+_:where(th,p_code,li_code,a,mark){font:semibold;_font:medium@dark}
+_:where(ul){list-style-type:disc}
+_:where(ul,ol,blockquote){pl:1.5em}
+_:where(video,img){max-width:full}
+_:where(a,mark){text-underline-offset:3}"><h1 id=more-to-learn>More To Learn</h1><p>Moving on to the next batch of war rooms, the challenges get a bit more technical and a bit more fun. So let&rsquo;s continue, shall we…</p><h2 id=level-06>LEVEL 06</h2><p><strong>Natas6</strong> start us off by asking for a secret password and if we enter the wrong password it gives us an error message.</p><p><img src=../../Blog3/natas-6-home.png alt></p><p>if we view the source we can see the verification function that is used here, and we can see that it in the <code>PHP</code> code it includes a file called <code>/includes/secret.inc</code> if we visit the page in our browser we see an empty page but viewing the source reveals the password need to pass verification <code>FOEIUWGHFEEUHOFUOIU</code>. When we enter the secret in the homepage, and we get the password required to access the next room.</p><p>The password is <code>jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr</code>.</p><h2 id=level-07>LEVEL 07</h2><p>When we first connect to the page, we see two links that leads to</p><p><img src=../../Blog3/natas7-home.png alt></p><p>and</p><p><img src=../../Blog3/natas7-about.png alt></p><p>When we view the page source for both these pages, we see a comment left behind, giving us a hint.</p><p><code>hint: password for webuser natas8 is in /etc/natas_webpass/natas8</code></p><p>We also see that when we click on any of the hyperlinks, the URL of the page changes to</p><p><code>index.php?page=home</code>.</p><p>This could mean that these pages are loaded in using an include function in <code>PHP</code> and that could lead us to a <strong>local file inclusion vulnerability</strong></p><p>If we enter the file path that the clue gave us, it leads to a new page giving us the next password.</p><p><img src=../../Blog3/natas7-pass.png alt></p><h2 id=level-08>LEVEL 08</h2><p>Level 8 starts off similar to level 6 asking us for a password. Viewing the source shows us the verification method used.</p><p><img src=../../Blog3/natas8-encode.png alt></p><p>We can see that it takes our password, does a few operations on it and then compares it to the <code>$encodedSecret = "3d3d516343746d4d6d6c315669563362"</code>.</p><p>So to crack the password if simply perform the operations in reverse order on the <code>$encodedSecret</code>.</p><p>Firstly we convert the <code>$encodedSecret"</code> from <code>bin2hex</code> then reverse the string that we get and finally decode the <code>bas64</code> output leaving us with the</p><p>secret <code>oubWYf2kBq</code> and the password to next level <code>Sda6t0vkOPkM8YeOZkAGVhFoaplvlJFd</code>.</p><h2 id=level-09>LEVEL 09</h2><p>This room is a great example to learn about command injections. The homepage contains a search box which returns all the string that match the user entered string.</p><p><img src=../../Blog3/natas9-home.png alt></p><p>Viewing the source shows us that the search function essentially runs the Linux command <code>passthru("grep -i $key dictionary.txt");</code> on the given user string using the <code>PHP</code> command <code>passthru</code>, this is the key to cracking this room. As the <code>passthru</code> function does no check on the user input, we can use it to run our own commands. To run multiple commands on Linux simultaneously, we use the <code>;</code> symbol telling the shell that the command following the <code>;</code> symbol need to execute regardless of the success of the first command. By doing this, we can view all the files and folders present on the machine.</p><p><img src=../../Blog3/natas9-all-files.png alt></p><p>We know from the <strong>Natas</strong> start page that <code>All passwords are also stored in /etc/natas_webpass/</code> so we can go to file location <code>/etc/natas_webpass/natas10</code> to get the password to the next room. We can use the payload <code>; cat /etc/natas_webpass/natas10</code> to view the contents of the file <strong>natas10</strong>. This gets us the password for the next room <code>D44EcsFkLxPIkAAKLosx8z3hxX1Z4MCE</code>. To make the output of our payload cleaner we can use the <code>#</code> symbol that is used to trim string and comment out the rest of command output (which in our case the output of the command <code>grep -i $key dictionary.txt</code>)</p><p><img src=../../Blog3/natas9-fin-pay.png alt></p><h2 id=level-10>LEVEL 10</h2></div></article><footer class=py:24><div class="f:fade-30 f:14 mb:8">© Snow-Kluster</div><div class="f:fade-60 f:12">Theme <a class=f:bold href=https://github.com/serkodev/holy _target=_blank>Holy</a></div></footer></div></div></body></html>
